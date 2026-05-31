@@ -20,7 +20,7 @@ Valid types:
 
 Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component of the feature is complete. A commit should be small enough to be reviewable on its own, not a dump of the full feature at the end.
 
-Commit messages must be short, declarative, and single-line.
+Commit messages must be short, declarative, and single-line. Sub-feature scoped commits make it easier to review changes over time, especially on PRs with many commits.
 
 ## Pushing
 
