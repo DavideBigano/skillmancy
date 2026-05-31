@@ -6,7 +6,7 @@ Use Glob to check whether `.claude/skills/<name>/` exists.
 
 If it does not, respond:
 
-> No skill named `<name>` found at `.claude/skills/<name>/`. Use `/skill-making create <name>` to create it.
+> No skill named `<name>` found at `.claude/skills/<name>/`. Use `/skillmancy:wizard create <name>` to create it.
 
 Do not continue.
 

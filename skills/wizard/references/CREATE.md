@@ -6,7 +6,7 @@ Use Glob to check whether `.claude/skills/<name>/SKILL.md` already exists.
 
 If it does, respond:
 
-> A skill named `<name>` already exists at `.claude/skills/<name>/`. Use `/skill-making edit <name>` to modify it.
+> A skill named `<name>` already exists at `.claude/skills/<name>/`. Use `/skillmancy:wizard edit <name>` to modify it.
 
 Do not continue.
 
