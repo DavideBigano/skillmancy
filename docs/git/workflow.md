@@ -51,3 +51,24 @@ Example: `[Enhancement] Add user authentication flow`
 The title may differ from the branch name if the scope of the feature changed after the branch was created.
 
 **Body** — must follow `.github/PULL_REQUEST_TEMPLATE.md`.
+
+## After merge
+
+When the user reports a PR as merged, verify before acting:
+```
+gh pr view <pr-number> --json state
+```
+
+If confirmed merged, clean up:
+```
+git checkout main
+git branch -d <branch-name>
+git pull --prune
+```
+
+## Pulling main into a feature branch
+
+To bring the latest main changes into the current feature branch:
+```
+git pull origin main
+```
