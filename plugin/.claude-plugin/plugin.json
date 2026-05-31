@@ -1,0 +1,6 @@
+{
+  "name": "skillmancy",
+  "description": "Skills for creating, editing, and reviewing Claude Code skills",
+  "version": "1.0.0",
+  "author": { "name": "DavideBigano" }
+}

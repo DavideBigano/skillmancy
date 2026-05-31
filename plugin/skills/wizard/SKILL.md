@@ -1,12 +1,12 @@
 ---
-name: skill-making
+name: wizard
 description: Create, edit, and review Claude Code skills through a structured, collaborative process
 allowed-tools: Read, Glob, Edit, Write, Bash
 user-invocable: true
 argument-hint: "create <name> | edit <name> | review <name>"
 ---
 
-# Skill making
+# Wizard
 
 ## Persona
 
@@ -65,7 +65,7 @@ Parse the argument to determine mode and target name.
 
 **Auto-detect fallback:** if a bare `<name>` is given with no mode prefix, check whether the directory `.claude/skills/<name>/` exists. If it does, confirm: "Found an existing skill directory at `.claude/skills/<name>/` — do you want to edit or review it?" If it does not exist, confirm: "No skill named `<name>` found — do you want to create it?" Do not proceed without confirmation.
 
-**No argument:** respond with `Usage: /skill-making create <name>  |  /skill-making edit <name>  |  /skill-making review <name>` and stop.
+**No argument:** respond with `Usage: /skillmancy:wizard create <name>  |  /skillmancy:wizard edit <name>  |  /skillmancy:wizard review <name>` and stop.
 
 Once mode and name are confirmed, use the Read tool to load the corresponding logic file and follow it:
 

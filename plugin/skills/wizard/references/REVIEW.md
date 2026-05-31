@@ -6,7 +6,7 @@ Use Glob to check whether `.claude/skills/<name>/` exists.
 
 If it does not, respond:
 
-> No skill named `<name>` found at `.claude/skills/<name>/`. Use `/skill-making create <name>` to create it.
+> No skill named `<name>` found at `.claude/skills/<name>/`. Use `/skillmancy:wizard create <name>` to create it.
 
 Do not continue.
 
@@ -122,4 +122,4 @@ If there are no findings, say so. If there are no suggestions, omit that section
 
 After presenting the report, if there are findings, say:
 
-> To address these, run `/skill-making edit <name>` — the findings above are the edit scope.
+> To address these, run `/skillmancy:wizard edit <name>` — the findings above are the edit scope.
