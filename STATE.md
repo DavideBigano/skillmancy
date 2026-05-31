@@ -1,13 +1,13 @@
-# skill-making — session state
+# wizard — session state
 
-Working thread for iterative improvement of the `skill-making` skill at `.claude/skills/skill-making/`.
+Working thread for iterative improvement of the `wizard` skill at `.claude/skills/wizard/`.
 
 ---
 
 ## Files in scope
 
 ```
-.claude/skills/skill-making/
+.claude/skills/wizard/
 ├── SKILL.md
 ├── references/
 │   ├── CREATE.md
