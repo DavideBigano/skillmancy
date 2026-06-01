@@ -30,8 +30,10 @@ docs/
 
 ### Rules for agents
 
-- **Consult first**: whenever a topic comes up — in conversation, when planning, or before writing — check `docs/index.md` to see if relevant knowledge exists and read the relevant files before responding or acting.
-- **After writing**: always update `docs/index.md` to include the new file.
+- **Index pre-loading**: at session start always load the [docs index](./docs/index.md) to have a routing reference always on hand.
+- **Consult first**: whenever a topic comes up — in conversation, when planning, or before writing — check [docs index](./docs/index.md)  to see if relevant knowledge exists and read the relevant files before responding or acting.
+- **After writing**: always update [docs index](./docs/index.md)  to include the new file.
 - **Naming**: domain folders and file names must be descriptive enough that the index alone tells you where to look without opening files. Use lowercase kebab-case.
 - **Scope**: one coherent topic per file. Split when a file covers more than one distinct concept.
 - **No orphans**: every `.md` file under `docs/` (except `index.md` itself) must have an entry in the index.
+- **Every doc belongs to a domain**: all content files must live inside a domain subdirectory. Only `index.md` lives directly under `docs/`.

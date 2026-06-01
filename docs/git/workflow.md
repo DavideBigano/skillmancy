@@ -1,5 +1,14 @@
 # Git Workflow
 
+Branching conventions, commit discipline, and PR process for this project.
+
+- [Branching](#branching)
+- [Committing](#committing)
+- [Pushing](#pushing)
+- [Pull Requests](#pull-requests)
+- [After merge](#after-merge)
+- [Pulling main into a feature branch](#pulling-main-into-a-feature-branch)
+
 ## Branching
 
 Always branch off `main`.
@@ -18,9 +27,9 @@ Valid types:
 
 ## Committing
 
-Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component of the feature is complete. A commit should be small enough to be reviewable on its own, not a dump of the full feature at the end.
+Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component is complete — small enough to be reviewable on its own.
 
-Commit messages must be short, declarative, and single-line. Sub-feature scoped commits make it easier to review changes over time, especially on PRs with many commits.
+**One-line commits** — short, declarative, single-line. Makes PR history readable.
 
 ## Pushing
 
@@ -48,7 +57,7 @@ gh pr create --title "<PR title>" --body "<PR body>"
 ```
 Example: `[Enhancement] Add user authentication flow`
 
-The title may differ from the branch name if the scope of the feature changed after the branch was created.
+The title may differ from the branch name if the scope changed after the branch was created.
 
 **Body** — must follow `.github/PULL_REQUEST_TEMPLATE.md`.
 
@@ -56,7 +65,7 @@ The title may differ from the branch name if the scope of the feature changed af
 
 When the user reports a PR as merged, verify before acting:
 ```
-gh pr view <pr-number> --json state
+gh pr view <pr-number> --json state -q .state
 ```
 
 If confirmed merged, clean up:
