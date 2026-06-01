@@ -1,6 +1,6 @@
 # Wizard — Supported flows
 
-The wizard skill support three flows:
+The wizard skill supports three flows:
 
 - **CREATE** — Used to create a new skill from scratch
 - **EDIT** — Used to edit an existing skill
@@ -15,7 +15,7 @@ Each flow:
 
 - [CREATE — six phases](#create--six-phases)
 - [EDIT — three steps](#edit--three-steps)
-- [REVIEW — three steps](#review--three-steps)
+- [REVIEW — four steps](#review--four-steps)
 
 ---
 
@@ -27,7 +27,7 @@ Phases run in order by default. The user can request a different order. **Do not
 Establishes what the skill is for, who it serves, and what is in/out of scope. Opens with an `AskUserQuestion` offering top-down (goal-first) or bottom-up (implementation-first) approach. Ends with axis determination — the first time the axis is set.
 
 ### Phase 2 — Task definition
-Defines what the skill does and how. An optional mermaid flowchart can be generated as a shared anchor for iteration. The flowchart is written to a timestamped file (`skill-flow-<timestamp>.md`) the user can render; it is deleted once the skill is written.
+Defines what the skill does and how. An optional mermaid flowchart (`skill-flow-<timestamp>.md`) can anchor iteration; delete it once the skill is written.
 
 ### Phase 3 — Persona
 Proposes named authorities from the corpus most relevant to the domain. For each, wizard states the lens it contributes and why it belongs, grounded in the scoping discussion. If the corpus is thin, flags it and invites manual first-person directives.
@@ -36,7 +36,7 @@ Proposes named authorities from the corpus most relevant to the domain. For each
 Proposes rules derived from Phases 1–3. Each rule is presented with the specific behavior or risk it addresses. "Be direct, not diplomatic" is always the first rule, requires no rationale. Ends with an axis update.
 
 ### Phase 5 — Key concepts (optional)
-Surfaces concepts that appeared across multiple phases and need consistent treatment: shared vocabulary, frameworks, operating assumptions, construction guidance. Thin or redundant concepts are flagged for expansion or removal. Skipped if nothing surfaced. Ends with an axis update.
+Surfaces concepts from prior phases needing consistent treatment (vocabulary, frameworks, assumptions, guidance). Thin or redundant ones are flagged. Skipped if nothing surfaced. Ends with an axis update.
 
 ### Phase 6 — Writing
 Creates `.claude/skills/<name>/` (or the configured output directory), writes SKILL.md from the blank template, and creates any reference sub-files if the task flow requires flow-based dispatch. Runs `Glob(.claude/skills/<name>/**)` before finalizing to check for dead references.
@@ -47,7 +47,7 @@ Creates `.claude/skills/<name>/` (or the configured output directory), writes SK
 
 No numbered phases; the flow is: **Scoping → Change proposals → File update**.
 
-**Scoping** — reads the full skill first (SKILL.md + all references/, examples/, scripts/). Opens with the same top-down / bottom-up `AskUserQuestion` as CREATE, but skips questions whose answers are clearly derivable from context (especially relevant when called after a review). Establishes which sections are in scope and which are not. Sets the axis.
+**Scoping** — reads the full skill (SKILL.md + all sub-files). Same top-down / bottom-up `AskUserQuestion` as CREATE; skip questions answerable from context. Establishes scope and sets the axis.
 
 **Change proposals** — works through affected sections in order: task → persona → rules → key concepts. For each: presents the current behavior, proposes the change, iterates until approved. Does not touch sections outside the agreed scope.
 
@@ -55,7 +55,7 @@ No numbered phases; the flow is: **Scoping → Change proposals → File update*
 
 ---
 
-## REVIEW — three steps
+## REVIEW — four steps
 
 **Scoping → Review → Report → Handoff**.
 

@@ -27,9 +27,9 @@ Valid types:
 
 ## Committing
 
-Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component of the feature is complete. A commit should be small enough to be reviewable on its own, not a dump of the full feature at the end.
+Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component is complete — small enough to be reviewable on its own.
 
-**One-line commits** — Commit messages must be short, declarative, and single-line. Sub-feature scoped commits make it easier to review changes over time, especially on PRs with many commits.
+**One-line commits** — short, declarative, single-line. Makes PR history readable.
 
 ## Pushing
 
@@ -57,7 +57,7 @@ gh pr create --title "<PR title>" --body "<PR body>"
 ```
 Example: `[Enhancement] Add user authentication flow`
 
-The title may differ from the branch name if the scope of the feature changed after the branch was created.
+The title may differ from the branch name if the scope changed after the branch was created.
 
 **Body** — must follow `.github/PULL_REQUEST_TEMPLATE.md`.
 

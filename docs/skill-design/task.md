@@ -1,15 +1,14 @@
-# Wizard — Task
+# Skill design — Task
 
 The operational logic section: argument dispatch, scoping questions, and the preconditions that gate output.
 
 - [What the Task section does](#what-the-task-section-does)
-- [Structure](#structure)
 - [Multi-flow dispatch](#multi-flow-dispatch)
 - [Axis relationship](#axis-relationship)
 
 ## What the Task section does
 
-Task is the operational logic section of a skill. Where Persona and How to engage shape *how* the skill behaves, Task defines *what* it does: how it interprets its argument, what it asks before acting, and what condition must be met before output begins.
+Task defines *what* the skill does: how it interprets its argument, what it asks before acting, and what condition gates output. Where Persona and rules shape behavior, Task specifies execution.
 
 ---
 
@@ -25,14 +24,14 @@ Once flow and name are confirmed, use the Read tool to load the corresponding lo
 - **review** → [REVIEW.md](./references/REVIEW.md)
 ```
 
-This is progressive disclosure applied to the Task section: the SKILL.md dispatcher stays small and always-loaded; the flow-specific logic is read on demand.
+The SKILL.md dispatcher stays small and always-loaded; flow-specific logic is read on demand.
 
-**Auto-detect fallback** — when a bare argument is given with no explicit flow, the Task section can check for the relevant artifact and confirm with the user before proceeding. Always confirm; never assume.
+**Auto-detect fallback** — if a bare argument is given with no explicit flow, check for the relevant artifact and confirm before proceeding. Always confirm; never assume.
 
-**No-argument handling** — always specify what happens if the skill is invoked with no argument. Either show a usage line and stop, or begin a scoping conversation. Never silently fail.
+**No-argument handling** — always specify what happens with no argument: show a usage line and stop, or begin a scoping conversation. Never silently fail.
 
 ---
 
 ## Axis relationship
 
-An operational skill has a heavier Task section — more specific output specs, tighter preconditions, explicit artifact structure. A conversational skill has a lighter Task section; the value is in the dialogue, not the artifact, so the precondition is softer and the output spec is minimal. When the axis shifts, Task is the section most likely to need rebalancing.
+Operational skills have heavier Task sections — tighter preconditions, explicit artifact structure. Conversational skills have lighter ones; value is in the dialogue. When the axis shifts, Task is the first section to rebalance.

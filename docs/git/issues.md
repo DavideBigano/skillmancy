@@ -1,6 +1,6 @@
 # GitHub Issues
 
-Issues serve as the project backlog. Whenever a conversation or implementation reveals work that is out of scope for the current task, capture it as an issue rather than letting it get lost.
+Issues serve as the project backlog. Capture any out-of-scope work as an issue rather than letting it get lost.
 
 - [Creating an issue](#creating-an-issue)
 - [Listing open issues](#listing-open-issues)
@@ -19,7 +19,7 @@ Types follow the same convention as branches:
 - `Bugfix`
 - `Cleanup`
 
-The body should briefly explain what needs doing and why it came up. Keep it short — enough context for someone picking it up cold.
+The body should briefly explain what needs doing and why. Enough context for someone picking it up cold.
 
 ## Listing open issues
 
