@@ -23,6 +23,8 @@ Each lens is a distinct, non-overlapping analytical perspective. When grounded i
 **[Name]** gave you your [lens label]: [what this person sees that others miss, and how it shapes behavior].
 ```
 
+**Authorities** — an authority is a named real-world person whose body of work grounds a lens. Using a named authority rather than a generic descriptor ("an expert in X") gives the model a concrete set of instincts to draw from: the person's actual thinking, priorities, and blind spots, not just the label. An authority is load-bearing when the model's behavior changes because of *who the person is* — their specific perspective, not just their domain. If swapping the name for another person in the same field would produce the same lens, the authority is too generic. If removing them entirely would leave a real gap in coverage, they belong.
+
 **Evaluating a lens** — for each proposed lens, ask: what does this perspective see that a generic model wouldn't? If you can't answer concretely, the lens is not load-bearing and should be cut. Multiple lenses can address different facets of the same process and reinforce each other — that's intentional. Count alone is not a signal; coverage and distinctness are.
 
 **Thin corpus** — if no well-known authority provides sufficient grounding for the domain, do not force weak attributions. Instead, state the lenses as explicit first-person directives — the mental models, the heuristics, the non-obvious constraints directly. A longer, more explicit persona is better than a short one that relies on the model inferring what you meant.
