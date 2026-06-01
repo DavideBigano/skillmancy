@@ -10,7 +10,7 @@ If it does not, respond:
 
 Do not continue.
 
-If it exists, read the full skill: SKILL.md and all files in `references/`, `examples/`, and `scripts/`. Every file must be read before the edit begins. The edit looks at the full skill, not just SKILL.md.
+If it exists, read the full skill: SKILL.md and all files in `references/`, `examples/`, and `scripts/`. Every file must be read before the edit begins — the edit covers the full skill, not just SKILL.md.
 
 ---
 
@@ -36,7 +36,7 @@ Otherwise, if option 2 is chosen, follow up by asking:
 > 2. How do they need to change?
 > 3. What part/s do you NOT want to touch?
 
-If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation focused on the unclear point. The phase ends only when all three have concrete, actionable answers.
+If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation on the unclear point. The phase ends only when all three have concrete, actionable answers.
 
 **Determining the axis position** — Based on what has been agreed, state where the skill sits:
 
@@ -62,13 +62,13 @@ XX% conversational - YY% operational
 
 ## Change proposals
 
-Based on the scoping answers, determine which of the following sections require changes: **task**, **persona**, **rules**, **key concepts**. Only work on sections that are genuinely affected — do not propose changes to sections the user did not indicate need editing.
+Based on the scoping answers, determine which sections require changes: **task**, **persona**, **rules**, **key concepts**. Only work on sections genuinely affected — do not propose changes the user did not indicate.
 
-For each affected section, follow this pattern:
+For each affected section:
 
 1. **Present the current behavior** — quote or summarize the relevant part of the existing skill.
-2. **Propose the new behavior** — if the scoping answers provide enough direction, make a concrete proposal. If not, ask a targeted clarifying question first, then propose.
-3. **Refine until approved** — if the user pushes back or wants changes, iterate through conversation. Do not move to the next section until the current one is approved.
+2. **Propose the new behavior** — if scoping provides enough direction, make a concrete proposal. If not, ask a targeted clarifying question first.
+3. **Refine until approved** — iterate through conversation if the user pushes back. Do not move to the next section until the current one is approved.
 
 Work through sections in this order: task → persona → rules → key concepts. If the user asks to address them in a different order, allow it.
 
@@ -123,8 +123,8 @@ For entries being removed, check whether any sections that pointed to them need 
 
 ## File update
 
-Once all proposed changes are approved, apply them using the Edit tool. Make targeted edits — change only what was agreed. Do not restructure or rewrite sections that were not part of the approved changes.
+Once all proposed changes are approved, apply them using the Edit tool. Make targeted edits — change only what was agreed. Do not restructure sections not part of the approved changes.
 
-If the scope of changes has grown to the point where a full rewrite is warranted, say so explicitly before proceeding.
+If scope has grown to the point where a full rewrite is warranted, say so explicitly before proceeding.
 
-Before finalizing, use `Glob(.claude/skills/<name>/**)` to list all files in the skill. Check each file for dead references and flag any to the user — let them decide whether to remove the reference, update it if stale, or create the missing file.
+Before finalizing, `Glob(.claude/skills/<name>/**)` to list all files. Check each for dead references and flag any to the user — let them decide whether to remove, update, or create the missing file.

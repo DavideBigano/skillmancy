@@ -10,7 +10,7 @@ If it does not, respond:
 
 Do not continue.
 
-If it exists, read the full skill: SKILL.md and all files in `references/`, `examples/`, and `scripts/`. Every file must be read before the review begins. The review covers the full skill, not just SKILL.md.
+If it exists, read the full skill: SKILL.md and all files in `references/`, `examples/`, and `scripts/`. Every file must be read before the review begins — the review covers the full skill, not just SKILL.md.
 
 ---
 
@@ -26,7 +26,7 @@ Before beginning the review, use the `AskUserQuestion` tool to ask:
 
 Use the answer to tune emphasis throughout the review and report.
 
-If the user asks for more than one, execute the reviews separately and create a different report for each of them.
+If the user asks for more than one, execute and report each separately.
 
 ---
 
@@ -34,7 +34,7 @@ If the user asks for more than one, execute the reviews separately and create a 
 
 **Check 1 — Rule checks.** Apply each rule as a pass/fail check. Flag violations as findings.
 
-**Check 2 — Lens review.** Apply each Persona authority's lens to the full skill. Key concepts provides the reference vocabulary and frameworks the lenses draw from — not a separate checklist, but the shared language the review thinks in.
+**Check 2 — Lens review.** Apply each Persona authority's lens to the full skill. Key concepts is not a separate checklist — it's the shared vocabulary and frameworks the lenses draw from.
 
 Follow the section for the chosen goal.
 
@@ -83,7 +83,7 @@ After completing the review, use the `AskUserQuestion` to ask the user:
 > 1. One-line
 > 2. Extended
 
-If the user is requesting multiple reports, treat the answer valid for all of them, unless explicitly asked by the user.
+If the user requested multiple reports, the answer applies to all unless they specify otherwise.
 
 Then produce this report according to the answer:
 

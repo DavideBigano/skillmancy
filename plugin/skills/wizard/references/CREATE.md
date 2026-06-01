@@ -47,7 +47,7 @@ In both cases then ask:
 > 2. Who is the skill for — the person invoking it and their context?
 > 3. What is in scope and what is out of scope?
 
-If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation focused on the unclear point until all questions have concrete, actionable answers.
+If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation on the unclear point until all answers are concrete and actionable.
 
 **Determining the axis position** — Based on what has been agreed, state where the skill sits:
 
@@ -99,16 +99,16 @@ When the user approves, remind them:
 
 ## Phase 3 — Persona
 
-Draw from what was established in Phases 1–2. Propose the authorities from your corpus that seems most relevant to the subject. For each, state:
+Draw from what was established in Phases 1–2. Propose the authorities from your corpus most relevant to the subject. For each, state:
 
 - The lens it contributes
 - Why it belongs here — referencing a specific point from the scoping or task definition discussion
 
-If the corpus for this domain is thin, show the most relevant available but flag it explicitly:
+If the corpus is thin, show the most relevant available but flag it explicitly:
 
 > The corpus here is limited — these are the closest matches, but you may want to define parts of the persona manually.
 
-Ask the user which are worth keeping (at least three as a rule of thumb). If the proposed authorities don't fit or the user wants alternatives, switch to a conversation to find them. Custom additions — first-person directives, explicit mental models — are always welcome alongside or instead of named authorities.
+Ask the user which are worth keeping (at least three as a rule of thumb). If proposed authorities don't fit, switch to a conversation to find alternatives. Custom additions — first-person directives, explicit mental models — are always welcome alongside or instead of named authorities.
 
 ---
 
@@ -129,11 +129,11 @@ In light of the matter discussed in this phase update the axis (skip if unchange
 
 ## Phase 5 — Key concepts (optional)
 
-Based on everything discussed in Phases 1–4, identify concepts that surfaced across multiple sections: shared vocabulary, conceptual frameworks, operating assumptions, and shared construction guidance the skill takes for granted.
+Based on everything discussed in Phases 1–4, identify concepts that surfaced across multiple sections: shared vocabulary, conceptual frameworks, operating assumptions, and construction guidance the skill takes for granted.
 
-Present the list to the user and ask whether anything is missing. Refine until complete.
+Present the list and ask whether anything is missing. Refine until complete.
 
-For each concept on the list, assess whether it has enough substance to stand as a Key concepts entry — meaning it is not already fully captured by an authority's lens in Persona, by a rule in Rules, or by a step in Task. Flag thin or redundant concepts explicitly; either expand them through conversation or drop them.
+For each concept, assess whether it has enough substance for a Key concepts entry — meaning it isn't already fully captured by a Persona lens, a rule in Rules, or a step in Task. Flag thin or redundant concepts explicitly; expand through conversation or drop them.
 
 If nothing surfaced from the discussion and the user has nothing to add, skip this section.
 
@@ -153,7 +153,7 @@ If the user agrees, proceed. If they push back, discuss until agreed.
 
 ## Phase 6 — Writing
 
-**Folder creation** — Check whether `.claude/skills/<name>/` already exists. If it does, use `<name>_01` as the directory name for the remainder of this phase. Then create the directory:
+**Folder creation** — Check whether `.claude/skills/<name>/` already exists. If it does, use `<name>_01` for the remainder of this phase. Then create the directory:
 
 ```bash
 mkdir .claude/skills/<name>
@@ -161,9 +161,9 @@ mkdir .claude/skills/<name>
 
 Populate `.claude/skills/<name>/SKILL.md` using the Write tool. Use the blank skill template in SKILL.md as the starting point. Populate every section with what was agreed in Phases 1–5.
 
-If the agreed task flow includes mode-based dispatch or conditional loading, create the corresponding sub-files now, following the multi-file structure pattern in SKILL.md's Key concepts.
+If the task flow includes mode-based dispatch or conditional loading, create the corresponding sub-files now, following the multi-file structure pattern in SKILL.md's Key concepts.
 
-Before finalizing, `Glob(.claude/skills/<name>/**)` to list all files in the skill. Check each file for dead references and flag any to the user — let them decide whether to remove the reference, update it if stale, or create the missing file.
+Before finalizing, `Glob(.claude/skills/<name>/**)` to list all files. Check each for dead references and flag any to the user — let them decide whether to remove, update, or create the missing file.
 
 Remind the user:
 
