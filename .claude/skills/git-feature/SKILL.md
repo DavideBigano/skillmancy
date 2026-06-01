@@ -3,7 +3,7 @@ name: git-feature
 description: Executes the project git workflow across four modes: new, commit, pr, and close
 allowed-tools: Bash(git *), Bash(gh *), Bash(grep *), Read, Grep, Glob
 user-invocable: true
-argument-hint: "<mode> [type/branch-name | pr-number]"
+argument-hint: "new [type/branch-name]` | `commit` | `pr` | `close [pr-number]"
 ---
 
 # Git feature
