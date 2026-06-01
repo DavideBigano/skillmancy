@@ -1,5 +1,13 @@
 # Wizard — Key concepts
 
+The optional canonical reference layer: shared vocabulary, frameworks, and assumptions that need consistent treatment across multiple skill sections.
+
+- [What key concepts are](#what-key-concepts-are)
+- [The four types of entry](#the-four-types-of-entry)
+- [When to add an entry](#when-to-add-an-entry)
+- [Format](#format)
+- [Common mistakes](#common-mistakes)
+
 ## What key concepts are
 
 Key concepts is the canonical reference layer for a skill. It holds vocabulary, frameworks, assumptions, and construction guidance that need to be applied consistently across more than one section or file. It is optional — if nothing needs to be defined once and used in multiple places, skip it.

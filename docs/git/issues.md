@@ -2,6 +2,10 @@
 
 Issues serve as the project backlog. Whenever a conversation or implementation reveals work that is out of scope for the current task, capture it as an issue rather than letting it get lost.
 
+- [Creating an issue](#creating-an-issue)
+- [Listing open issues](#listing-open-issues)
+- [Referencing issues](#referencing-issues)
+
 ## Creating an issue
 
 ```

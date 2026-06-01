@@ -1,5 +1,12 @@
 # Wizard — Persona
 
+The section that shapes what the skill notices and prioritizes, built from lenses each grounded in a named authority or stated as an explicit directive.
+
+- [What a persona does](#what-a-persona-does)
+- [Lenses](#lenses)
+- [Synthesis paragraph](#synthesis-paragraph)
+- [Axis relationship](#axis-relationship)
+
 ## What a persona does
 
 A persona shapes what the skill *notices* and *prioritizes*. The model behaves differently because it sees the problem through different eyes, not because it was told to follow different rules. This is implicit behavior specification: through its lenses, the skill adopts instincts without each one being spelled out as a rule.

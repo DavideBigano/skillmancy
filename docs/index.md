@@ -1,5 +1,7 @@
 # Index
 
+The authoritative index of all documentation in this project. Every `.md` file under `docs/` (except this file) has an entry here.
+
 - Git
     - [Workflow](./git/workflow.md)
     - [Issues](./git/issues.md)

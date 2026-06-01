@@ -1,5 +1,12 @@
 # Wizard — Task
 
+The operational logic section: argument dispatch, scoping questions, and the preconditions that gate output.
+
+- [What the Task section does](#what-the-task-section-does)
+- [Structure](#structure)
+- [Multi-flow dispatch](#multi-flow-dispatch)
+- [Axis relationship](#axis-relationship)
+
 ## What the Task section does
 
 Task is the operational logic section of a skill. Where Persona and How to engage shape *how* the skill behaves, Task defines *what* it does: how it interprets its argument, what it asks before acting, and what condition must be met before output begins.

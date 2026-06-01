@@ -13,6 +13,10 @@ Each flow:
 - advances through discrete steps or phases, not moving forward until the current one is complete
 - ends with a file operation (write or edit) and a dead-reference check
 
+- [CREATE — six phases](#create--six-phases)
+- [EDIT — three steps](#edit--three-steps)
+- [REVIEW — three steps](#review--three-steps)
+
 ---
 
 ## CREATE — six phases

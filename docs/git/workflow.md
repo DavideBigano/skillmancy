@@ -1,5 +1,14 @@
 # Git Workflow
 
+Branching conventions, commit discipline, and PR process for this project.
+
+- [Branching](#branching)
+- [Committing](#committing)
+- [Pushing](#pushing)
+- [Pull Requests](#pull-requests)
+- [After merge](#after-merge)
+- [Pulling main into a feature branch](#pulling-main-into-a-feature-branch)
+
 ## Branching
 
 Always branch off `main`.

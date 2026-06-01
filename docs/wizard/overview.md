@@ -2,6 +2,9 @@
 
 Wizard is the skill-authoring skill. It guides an editor through designing, modifying, and auditing Claude Code skills via a structured, phase-driven conversation. Its output is always a skill file on disk — not advice about skills.
 
+- [File layout](#file-layout)
+- [Supported flows](#supported-flows)
+
 ---
 
 ## File layout

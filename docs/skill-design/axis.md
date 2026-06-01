@@ -1,5 +1,11 @@
 # Skill design — Axis
 
+The conversational/operational ratio that positions a skill between pure dialogue and pure artifact generation, and determines how much weight to give each section.
+
+- [What the axis is](#what-the-axis-is)
+- [How to use it](#how-to-use-it)
+- [Axis relationship to each section](#axis-relationship-to-each-section)
+
 ## What the axis is
 
 Every skill sits somewhere between fully conversational (value lives in the dialogue) and fully operational (value lives in the artifact). The axis is the explicit statement of that position.

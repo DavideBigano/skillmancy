@@ -1,5 +1,13 @@
 # Wizard — Engagement rules
 
+Explicit behavioral conditions the skill must satisfy — governing sequencing and output quality rather than conversation style.
+
+- [What rules do](#what-rules-do)
+- [Format](#format)
+- [The fixed first rule](#the-fixed-first-rule)
+- [Adding, changing, and removing rules](#adding-changing-and-removing-rules)
+- [Axis relationship](#axis-relationship)
+
 ## What rules do
 
 Engagement rules are explicit conditions the skill must satisfy. Each rule exists because the model *would* behave differently without it — it makes a failure mode explicit rather than leaving it to the persona to catch implicitly.
