@@ -1,4 +1,4 @@
-# Wizard — Engagement rules
+# Wizard — Rules
 
 Explicit behavioral conditions the skill must satisfy — governing sequencing and output quality rather than conversation style.
 
@@ -10,7 +10,7 @@ Explicit behavioral conditions the skill must satisfy — governing sequencing a
 
 ## What rules do
 
-Engagement rules are explicit conditions the skill must satisfy. Each rule exists because the model *would* behave differently without it — it makes a failure mode explicit rather than leaving it to the persona to catch implicitly.
+Rules are explicit conditions the skill must satisfy. Each rule exists because the model *would* behave differently without it — it makes a failure mode explicit rather than leaving it to the persona to catch implicitly.
 
 Rules are not style guidance or tone instructions. Most govern sequencing and output quality, not conversation style. The right test for a rule: if you removed it, would the skill's behavior change in a concrete, observable way? If not, it's a preference, not a rule — cut it.
 

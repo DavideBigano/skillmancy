@@ -32,8 +32,8 @@ Defines what the skill does and how. An optional mermaid flowchart can be genera
 ### Phase 3 — Persona
 Proposes named authorities from the corpus most relevant to the domain. For each, wizard states the lens it contributes and why it belongs, grounded in the scoping discussion. If the corpus is thin, flags it and invites manual first-person directives.
 
-### Phase 4 — Engagement rules
-Proposes engagement rules derived from Phases 1–3. Each rule is presented with the specific behavior or risk it addresses. "Be direct, not diplomatic" is always the first rule, requires no rationale. Ends with an axis update.
+### Phase 4 — Rules
+Proposes rules derived from Phases 1–3. Each rule is presented with the specific behavior or risk it addresses. "Be direct, not diplomatic" is always the first rule, requires no rationale. Ends with an axis update.
 
 ### Phase 5 — Key concepts (optional)
 Surfaces concepts that appeared across multiple phases and need consistent treatment: shared vocabulary, frameworks, operating assumptions, construction guidance. Thin or redundant concepts are flagged for expansion or removal. Skipped if nothing surfaced. Ends with an axis update.
@@ -49,7 +49,7 @@ No numbered phases; the flow is: **Scoping → Change proposals → File update*
 
 **Scoping** — reads the full skill first (SKILL.md + all references/, examples/, scripts/). Opens with the same top-down / bottom-up `AskUserQuestion` as CREATE, but skips questions whose answers are clearly derivable from context (especially relevant when called after a review). Establishes which sections are in scope and which are not. Sets the axis.
 
-**Change proposals** — works through affected sections in order: task → persona → engagement rules → key concepts. For each: presents the current behavior, proposes the change, iterates until approved. Does not touch sections outside the agreed scope.
+**Change proposals** — works through affected sections in order: task → persona → rules → key concepts. For each: presents the current behavior, proposes the change, iterates until approved. Does not touch sections outside the agreed scope.
 
 **File update** — applies approved changes with the Edit tool. Targeted edits only — does not restructure sections that weren't part of the agreed changes. Runs the same dead-reference Glob check as CREATE before finalizing.
 

@@ -11,7 +11,7 @@ Wizard is the skill-authoring skill. It guides an editor through designing, modi
 
 ```
 plugin/skills/wizard/
-├── SKILL.md                          # Always loaded: dispatcher, persona, engagement rules, key concepts
+├── SKILL.md                          # Always loaded: dispatcher, persona, rules, key concepts
 ├── references/
 │   ├── CREATE.md                     # Full phase-by-phase creation flow
 │   ├── EDIT.md                       # Scoping + change proposal + file update flow

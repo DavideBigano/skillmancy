@@ -4,11 +4,11 @@ Non-obvious decisions and why they were made. Read this before editing the skill
 
 ---
 
-**Cross-section reinforcement is intentional, not duplication.** Persona, How to engage rules, and Key concepts can all address the same underlying concept at different abstraction levels. The test for genuine duplication is: does each representation do something the others don't? If yes, keep all. If no, cut the weaker one. Don't conflate "appears in two places" with "redundant."
+**Cross-section reinforcement is intentional, not duplication.** Persona, rules, and Key concepts can all address the same underlying concept at different abstraction levels. The test for genuine duplication is: does each representation do something the others don't? If yes, keep all. If no, cut the weaker one. Don't conflate "appears in two places" with "redundant."
 
-**Rules are conditions, not interaction directives.** How to engage rules are explicit conditions the skill must satisfy — on the work, on sequencing, on output quality. The older framing positioned them as interaction style guidance. The current framing is more general and more accurate: most rules in practice govern sequencing and output quality, not how wizard talks to the user. When writing or reviewing rules, ask "what condition does this enforce?" not "how does this change the tone?"
+**Rules are conditions, not interaction directives.** Rules are explicit conditions the skill must satisfy — on the work, on sequencing, on output quality. The older framing positioned them as interaction style guidance. The current framing is more general and more accurate: most rules in practice govern sequencing and output quality, not how wizard talks to the user. When writing or reviewing rules, ask "what condition does this enforce?" not "how does this change the tone?"
 
-**Axis integrated into flow, not embedded per-section.** The axis is established once in Scoping and updated at phase boundaries. An older pattern placed axis discussions inside the Persona and Engagement rule change sections independently. That caused drift between instances and redundant re-establishment. The current pattern is cleaner and less likely to diverge.
+**Axis integrated into flow, not embedded per-section.** The axis is established once in Scoping and updated at phase boundaries. An older pattern placed axis discussions inside the Persona and rule change sections independently. That caused drift between instances and redundant re-establishment. The current pattern is cleaner and less likely to diverge.
 
 **Flowchart is optional in CREATE.** For simpler skills, the full flowchart step is overhead. The instruction prompts wizard to *offer* the flowchart rather than mandate it. Editors should resist re-mandating it — the optionality is deliberate.
 

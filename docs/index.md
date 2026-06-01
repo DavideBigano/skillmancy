@@ -9,7 +9,7 @@ The authoritative index of all documentation in this project. Every `.md` file u
     - [Overview](./skill-design/overview.md)
     - [Axis](./skill-design/axis.md)
     - [Persona](./skill-design/persona.md)
-    - [Engagement rules](./skill-design/engagement-rules.md)
+    - [Rules](./skill-design/rules.md)
     - [Task](./skill-design/task.md)
     - [Key concepts](./skill-design/key-concepts.md)
 - Wizard

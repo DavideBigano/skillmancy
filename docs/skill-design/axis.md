@@ -35,7 +35,7 @@ The axis determines how much weight to give each section:
 
 **Persona** — conversational skills need a rich, detailed Persona; operational skills can carry a lighter one.
 
-**Engagement rules** — carry more weight in operational skills, where consistent output depends more on explicit conditions. In conversational skills, the Persona does more of this work implicitly.
+**Rules** — carry more weight in operational skills, where consistent output depends more on explicit conditions. In conversational skills, the Persona does more of this work implicitly.
 
 **Task** — operational skills have heavier Task sections (tighter preconditions, explicit artifact structure); conversational skills have lighter ones.
 
