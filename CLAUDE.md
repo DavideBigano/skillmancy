@@ -35,3 +35,4 @@ docs/
 - **Naming**: domain folders and file names must be descriptive enough that the index alone tells you where to look without opening files. Use lowercase kebab-case.
 - **Scope**: one coherent topic per file. Split when a file covers more than one distinct concept.
 - **No orphans**: every `.md` file under `docs/` (except `index.md` itself) must have an entry in the index.
+- **Every doc belongs to a domain**: all content files must live inside a domain subdirectory. Only `index.md` lives directly under `docs/`.

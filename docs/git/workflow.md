@@ -20,7 +20,7 @@ Valid types:
 
 Follow **Commit Early, Commit Often (CECO)**: commit every time a self-contained sub-component of the feature is complete. A commit should be small enough to be reviewable on its own, not a dump of the full feature at the end.
 
-Commit messages must be short, declarative, and single-line. Sub-feature scoped commits make it easier to review changes over time, especially on PRs with many commits.
+**One-line commits** — Commit messages must be short, declarative, and single-line. Sub-feature scoped commits make it easier to review changes over time, especially on PRs with many commits.
 
 ## Pushing
 
@@ -56,7 +56,7 @@ The title may differ from the branch name if the scope of the feature changed af
 
 When the user reports a PR as merged, verify before acting:
 ```
-gh pr view <pr-number> --json state
+gh pr view <pr-number> --json state -q .state
 ```
 
 If confirmed merged, clean up:
