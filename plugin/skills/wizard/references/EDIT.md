@@ -62,7 +62,7 @@ XX% conversational - YY% operational
 
 ## Change proposals
 
-Based on the scoping answers, determine which of the following sections require changes: **task**, **persona**, **engagement rules**, **key concepts**. Only work on sections that are genuinely affected — do not propose changes to sections the user did not indicate need editing.
+Based on the scoping answers, determine which of the following sections require changes: **task**, **persona**, **rules**, **key concepts**. Only work on sections that are genuinely affected — do not propose changes to sections the user did not indicate need editing.
 
 For each affected section, follow this pattern:
 
@@ -70,7 +70,7 @@ For each affected section, follow this pattern:
 2. **Propose the new behavior** — if the scoping answers provide enough direction, make a concrete proposal. If not, ask a targeted clarifying question first, then propose.
 3. **Refine until approved** — if the user pushes back or wants changes, iterate through conversation. Do not move to the next section until the current one is approved.
 
-Work through sections in this order: task → persona → engagement rules → key concepts. If the user asks to address them in a different order, allow it.
+Work through sections in this order: task → persona → rules → key concepts. If the user asks to address them in a different order, allow it.
 
 ### Task changes
 
@@ -101,7 +101,7 @@ For each authority being removed, explain what gap this leaves and whether anyth
 
 If the corpus for this domain is thin, flag it explicitly and prompt the user to define the persona manually.
 
-### Engagement rule changes
+### Rule changes
 
 For each rule being added, changed, or removed, state:
 

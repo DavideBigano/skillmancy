@@ -32,7 +32,7 @@ If the user asks for more than one, execute the reviews separately and create a 
 
 ## Review
 
-**Check 1 — Rule checks.** Apply each How to engage rule as a pass/fail check. Flag violations as findings.
+**Check 1 — Rule checks.** Apply each rule as a pass/fail check. Flag violations as findings.
 
 **Check 2 — Lens review.** Apply each Persona authority's lens to the full skill. Key concepts provides the reference vocabulary and frameworks the lenses draw from — not a separate checklist, but the shared language the review thinks in.
 

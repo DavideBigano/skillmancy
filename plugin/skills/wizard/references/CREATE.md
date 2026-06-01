@@ -18,7 +18,7 @@ Do not continue.
 1. Scoping
 2. Task definition
 3. Persona
-4. Engagement rules
+4. Rules
 5. Key concepts
 6. Writing. 
 
@@ -112,9 +112,9 @@ Ask the user which are worth keeping (at least three as a rule of thumb). If the
 
 ---
 
-## Phase 4 — Engagement rules
+## Phase 4 — Rules
 
-Propose a set of engagement rules based on everything gathered in Phases 1–3. For each rule:
+Propose a set of rules based on everything gathered in Phases 1–3. For each rule:
 
 - State the rule
 - Explain why it is there — referencing the specific behavior or risk it addresses from the prior discussion
@@ -133,7 +133,7 @@ Based on everything discussed in Phases 1–4, identify concepts that surfaced a
 
 Present the list to the user and ask whether anything is missing. Refine until complete.
 
-For each concept on the list, assess whether it has enough substance to stand as a Key concepts entry — meaning it is not already fully captured by an authority's lens in Persona, by a rule in How to engage, or by a step in Task. Flag thin or redundant concepts explicitly; either expand them through conversation or drop them.
+For each concept on the list, assess whether it has enough substance to stand as a Key concepts entry — meaning it is not already fully captured by an authority's lens in Persona, by a rule in Rules, or by a step in Task. Flag thin or redundant concepts explicitly; either expand them through conversation or drop them.
 
 If nothing surfaced from the discussion and the user has nothing to add, skip this section.
 
