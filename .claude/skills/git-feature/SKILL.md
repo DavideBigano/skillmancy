@@ -81,9 +81,9 @@ Each invocation executes exactly one mode. Do not chain modes automatically.
 3. Propose a commit grouping using this template:
 
    ```markdown
-   Commit: <one-line-commit-message>
-   - file1
-   - file2
+   Commit [N]: <one-line-commit-message>
+   - [git/path/of/file1]
+   - [git/path/of/file2]
    ```
 
    The message must be one line and declarative.
