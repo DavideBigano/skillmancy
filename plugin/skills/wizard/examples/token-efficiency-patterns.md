@@ -51,7 +51,7 @@ Skill text fragments illustrating each pattern from the Key concepts section.
 
 ## Delegate to MCP servers or agents
 
-**Anti-pattern (How to engage rule):**
+**Anti-pattern (rule):**
 > **Cover all dimensions.** For each design decision, assess security implications, map to compliance requirements, and identify legal constraints before proceeding.
 
 **Pattern:**
