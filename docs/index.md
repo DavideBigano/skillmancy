@@ -11,7 +11,7 @@ The authoritative index of all documentation in this project. Every `.md` file u
     - [Persona](./skill-design/persona.md)
     - [Rules](./skill-design/rules.md)
     - [Task](./skill-design/task.md)
-    - [Key concepts](./skill-design/key-concepts.md)
+    - [Resources](./skill-design/resources.md)
 - Wizard
     - [Overview](./wizard/overview.md)
     - [Supported flows](./wizard/supported-flows.md)
