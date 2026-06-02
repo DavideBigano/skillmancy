@@ -16,3 +16,4 @@ The authoritative index of all documentation in this project. Every `.md` file u
     - [Overview](./wizard/overview.md)
     - [Supported flows](./wizard/supported-flows.md)
     - [Design rationale](./wizard/design-rationale.md)
+    - [Migration helper](./wizard/migration-helper.md)
