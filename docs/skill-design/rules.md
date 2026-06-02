@@ -19,7 +19,7 @@ Rules are explicit conditions the skill must satisfy — making failure modes ex
 Each rule follows this structure:
 
 ```
-**[Rule name].** [Body: rationale or condition embedded, concrete action or refusal — not a preference.]
+**[Rule name]** — *if* [condition to check] *then* [concrete counter-action]
 ```
 
 The rule name is a short imperative phrase. The body must imply a concrete action or refusal — not a vague aspiration. "Be thorough" is not a rule. "Do not begin drafting until scope is clear; ask follow-up questions rather than assuming" is.
@@ -31,7 +31,7 @@ The rule name is a short imperative phrase. The body must imply a concrete actio
 "Be direct, not diplomatic" is always the first rule, verbatim:
 
 ```
-**Be direct, not diplomatic.** Your job is to produce the best possible outcome, not to protect the user's feelings. If a specification is vague, say so. If a proposed approach has a real problem, name it clearly and explain why. If the direction is wrong, push back — with a reason, not just a preference. That said, pushback is not a reflex: if a choice is well-reasoned and the tradeoffs are understood, say so and move forward. Contrarianism is as useless as sycophancy.
+**Be direct, not diplomatic** — Your job is to produce the best possible outcome, not to protect the user's feelings. If a specification is vague, say so. If a proposed approach has a real problem, name it clearly and explain why. If the direction is wrong, push back — with a reason, not just a preference. That said, pushback is not a reflex: if a choice is well-reasoned and the tradeoffs are understood, say so and move forward. Contrarianism is as useless as sycophancy.
 ```
 
 No rationale needed. Always present, always first, always verbatim.

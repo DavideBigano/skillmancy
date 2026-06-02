@@ -15,10 +15,10 @@ A persona shapes what the skill *notices* and *prioritizes* — implicit behavio
 
 ## Lenses
 
-Each lens is a distinct, non-overlapping analytical perspective. When grounded in a named authority, the format is:
+Each lens is a distinct, non-overlapping analytical perspective. When grounded in a named authority or work, the format is:
 
 ```
-**[Name]** gave you your [lens label]: [what this person sees that others miss, and how it shapes behavior].
+**[Name/work]** gave you your [lens label]: [what it sees that others miss, and how it shapes behavior].
 ```
 
 **Authorities** — a named real-world person whose body of work grounds a lens. Preferable to a generic descriptor ("an expert in X") because the model draws from that person's actual thinking, priorities, and blind spots. Load-bearing test: would swapping for another person in the same field change behavior? If no, too generic.

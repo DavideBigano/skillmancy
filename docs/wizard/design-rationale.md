@@ -18,4 +18,4 @@ Non-obvious decisions and why they were made. Read this before editing the skill
 
 **Output path is currently hardcoded to `.claude/skills/`.** Known limitation — plugin repos use a different layout. Tracked in todo; do not work around by editing the path in multiple places.
 
-**The blank skill template in SKILL.md is the canonical starting point for new skills.** The Resources placeholder text ("Optional. Add entries for vocabulary, frameworks, assumptions, or construction guidance reused across sections. See Resources design for when and how.") signals both the optional nature and the pointer to the design section.
+**The blank skill template in SKILL.md is the canonical starting point for new skills.** The Resources section uses a structural template (`### Resource` headings with `**[Label]** — ...` placeholders) rather than prose instructions — consistent with the "show, don't describe" rule.

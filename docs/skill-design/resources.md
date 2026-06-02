@@ -39,7 +39,7 @@ Add when a concept needs consistent treatment across more than one section. Test
 Each entry follows this format:
 
 ```
-**[Concept name]** — [Definition or description.]
+**[Label]** — [Definition or description of a concept.]
 ```
 
 For longer entries, use a `**Bold title** — prose` paragraph. The `**Title** — prose` pattern is a formatting convention, not itself a Resources entry — it would be out of scope there.
