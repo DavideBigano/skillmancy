@@ -34,7 +34,7 @@ If the user asks for more than one, execute and report each separately.
 
 **Check 1 — Rule checks.** Apply each rule as a pass/fail check. Flag violations as findings.
 
-**Check 2 — Lens review.** Apply each Persona authority's lens to the full skill. Key concepts is not a separate checklist — it's the shared vocabulary and frameworks the lenses draw from.
+**Check 2 — Lens review.** Apply each Persona authority's lens to the full skill. Resources is not a separate checklist — it's the shared vocabulary and frameworks the lenses draw from.
 
 Follow the section for the chosen goal.
 
@@ -106,9 +106,9 @@ Then produce this report according to the answer:
 **[Suggestion N]**: 
 **File/s**: [Pertinent to which file/s]
 **Opportunity**: [Where the skill's own groundwork points to unexploited potential. One-line if requested.]
-**Grounded in**: [Specific authority, rule, or key concept that motivates this. One-line if requested.]
+**Grounded in**: [Specific authority, rule, or resource entry that motivates this. One-line if requested.]
 
-[Only include suggestions that can be pinned to something in the skill's own persona, rules, or key concepts. If a suggestion cannot be grounded this way, omit it.]
+[Only include suggestions that can be pinned to something in the skill's own persona, rules, or resources. If a suggestion cannot be grounded this way, omit it.]
 
 ### Summary
 [N] finding(s), [M] suggestion(s). [What is sound, what needs fixing, and where the biggest growth opportunity lies. Always one-line]

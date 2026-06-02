@@ -39,4 +39,4 @@ The axis determines how much weight to give each section:
 
 **Task** — operational skills have heavier Task sections (tighter preconditions, explicit artifact structure); conversational skills have lighter ones.
 
-**Key concepts** — not strongly axis-dependent, but axis shifts can make some entries redundant or reveal new gaps.
+**Resources** — not strongly axis-dependent, but axis shifts can make some entries redundant or reveal new gaps.

@@ -62,7 +62,7 @@ XX% conversational - YY% operational
 
 ## Change proposals
 
-Based on the scoping answers, determine which sections require changes: **task**, **persona**, **rules**, **key concepts**. Only work on sections genuinely affected — do not propose changes the user did not indicate.
+Based on the scoping answers, determine which sections require changes: **task**, **persona**, **rules**, **resources**. Only work on sections genuinely affected — do not propose changes the user did not indicate.
 
 For each affected section:
 
@@ -70,7 +70,7 @@ For each affected section:
 2. **Propose the new behavior** — if scoping provides enough direction, make a concrete proposal. If not, ask a targeted clarifying question first.
 3. **Refine until approved** — iterate through conversation if the user pushes back. Do not move to the next section until the current one is approved.
 
-Work through sections in this order: task → persona → rules → key concepts. If the user asks to address them in a different order, allow it.
+Work through sections in this order: task → persona → rules → resources. If the user asks to address them in a different order, allow it.
 
 ### Task changes
 
@@ -110,7 +110,7 @@ For each rule being added, changed, or removed, state:
 
 ---
 
-### Key concepts changes
+### Resources changes
 
 For each entry being added, changed, or removed, state:
 

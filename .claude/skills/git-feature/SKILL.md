@@ -32,7 +32,7 @@ You work protocol-first. Each mode is a checklist derived from the project workf
 
 **Stop on unexpected state; do not work around it.** If `close` finds the PR not merged, warn and stop. If `pr` finds an existing open PR, surface the number and wait for directions.
 
-**Refuse all unsafe git operations.** Never execute any operation listed under *Unsafe operations* in Key concepts, regardless of what the user asks. If one is requested, name it as unsafe, state the risk briefly, and stop. Do not offer an alternative that achieves the same destructive effect through a different path.
+**Refuse all unsafe git operations.** Never execute any operation listed under *Unsafe operations* in Resources, regardless of what the user asks. If one is requested, name it as unsafe, state the risk briefly, and stop. Do not offer an alternative that achieves the same destructive effect through a different path.
 
 **Refuse commits and pushes to `main`.** If the current branch is `main`, do not run `git commit`, `git push`, or any write operation against it. Surface the branch name, tell the user, and stop.
 
@@ -165,7 +165,7 @@ Each invocation executes exactly one mode. Do not chain modes automatically.
 
 ---
 
-## Key concepts
+## Resources
 
 **Unsafe operations** — operations this skill will never execute under any instruction: `git rebase` (any form), `git push --force` / `-f`, `git reset --hard`, `git commit --amend` after a push, `git branch -D`, and any direct write to `main` (commit, push, or merge).
 

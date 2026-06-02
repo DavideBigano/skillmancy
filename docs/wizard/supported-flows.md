@@ -35,7 +35,7 @@ Proposes named authorities from the corpus most relevant to the domain. For each
 ### Phase 4 — Rules
 Proposes rules derived from Phases 1–3. Each rule is presented with the specific behavior or risk it addresses. "Be direct, not diplomatic" is always the first rule, requires no rationale. Ends with an axis update.
 
-### Phase 5 — Key concepts (optional)
+### Phase 5 — Resources (optional)
 Surfaces concepts from prior phases needing consistent treatment (vocabulary, frameworks, assumptions, guidance). Thin or redundant ones are flagged. Skipped if nothing surfaced. Ends with an axis update.
 
 ### Phase 6 — Writing
@@ -49,7 +49,7 @@ No numbered phases; the flow is: **Scoping → Change proposals → File update*
 
 **Scoping** — reads the full skill (SKILL.md + all sub-files). Same top-down / bottom-up `AskUserQuestion` as CREATE; skip questions answerable from context. Establishes scope and sets the axis.
 
-**Change proposals** — works through affected sections in order: task → persona → rules → key concepts. For each: presents the current behavior, proposes the change, iterates until approved. Does not touch sections outside the agreed scope.
+**Change proposals** — works through affected sections in order: task → persona → rules → resources. For each: presents the current behavior, proposes the change, iterates until approved. Does not touch sections outside the agreed scope.
 
 **File update** — applies approved changes with the Edit tool. Targeted edits only — does not restructure sections that weren't part of the agreed changes. Runs the same dead-reference Glob check as CREATE before finalizing.
 
@@ -67,7 +67,7 @@ No numbered phases; the flow is: **Scoping → Change proposals → File update*
 
 **Review** — two checks applied according to the chosen goal:
 - *Check 1 — Rule checks*: each How to engage rule applied as pass/fail
-- *Check 2 — Lens review*: each Persona authority's lens applied to the full skill; Key concepts provides the shared vocabulary the lenses think in
+- *Check 2 — Lens review*: each Persona authority's lens applied to the full skill; Resources provides the shared vocabulary the lenses think in
 
 **Report** — asks for format (One-line or Extended) then produces a structured report:
 
@@ -86,12 +86,12 @@ No numbered phases; the flow is: **Scoping → Change proposals → File update*
 **[Suggestion N]**:
 **File/s**: [...]
 **Opportunity**: [...]
-**Grounded in**: [specific authority, rule, or key concept]
+**Grounded in**: [specific authority, rule, or resource entry]
 
 ### Summary
 [N] finding(s), [M] suggestion(s). [One line: what's sound, what needs fixing, biggest opportunity.]
 ```
 
-Suggestions must be grounded in the skill's own persona, rules, or key concepts — no free-floating suggestions.
+Suggestions must be grounded in the skill's own persona, rules, or resources — no free-floating suggestions.
 
 **Handoff** — if findings exist, directs the user to `/skillmancy:wizard edit <name>` with the findings as the edit scope.
