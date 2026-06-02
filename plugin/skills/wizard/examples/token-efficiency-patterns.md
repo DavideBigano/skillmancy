@@ -1,6 +1,6 @@
 # Token efficiency patterns — examples
 
-Skill text fragments illustrating each pattern from the Key concepts section.
+Skill text fragments illustrating each pattern from the Resources section.
 
 ---
 

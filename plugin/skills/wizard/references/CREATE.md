@@ -19,7 +19,7 @@ Do not continue.
 2. Task definition
 3. Persona
 4. Rules
-5. Key concepts
+5. Resources
 6. Writing. 
 
 **Phase traversal** — When in a phase, do not move to the next one until the current is complete unless the user explicitly requests it.
@@ -127,13 +127,13 @@ In light of the matter discussed in this phase update the axis (skip if unchange
 
 ---
 
-## Phase 5 — Key concepts (optional)
+## Phase 5 — Resources (optional)
 
 Based on everything discussed in Phases 1–4, identify concepts that surfaced across multiple sections: shared vocabulary, conceptual frameworks, operating assumptions, and construction guidance the skill takes for granted.
 
 Present the list and ask whether anything is missing. Refine until complete.
 
-For each concept, assess whether it has enough substance for a Key concepts entry — meaning it isn't already fully captured by a Persona lens, a rule in Rules, or a step in Task. Flag thin or redundant concepts explicitly; expand through conversation or drop them.
+For each concept, assess whether it has enough substance for a Resources entry — meaning it isn't already fully captured by a Persona lens, a rule in Rules, or a step in Task. Flag thin or redundant concepts explicitly; expand through conversation or drop them.
 
 If nothing surfaced from the discussion and the user has nothing to add, skip this section.
 
@@ -161,7 +161,7 @@ mkdir .claude/skills/<name>
 
 Populate `.claude/skills/<name>/SKILL.md` using the Write tool. Use the blank skill template in SKILL.md as the starting point. Populate every section with what was agreed in Phases 1–5.
 
-If the task flow includes mode-based dispatch or conditional loading, create the corresponding sub-files now, following the multi-file structure pattern in SKILL.md's Key concepts.
+If the task flow includes mode-based dispatch or conditional loading, create the corresponding sub-files now, following the multi-file structure pattern in SKILL.md's Resources.
 
 Before finalizing, `Glob(.claude/skills/<name>/**)` to list all files. Check each for dead references and flag any to the user — let them decide whether to remove, update, or create the missing file.
 

@@ -75,7 +75,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 
 ---
 
-## Key concepts
+## Resources
 
 ### Skill structure
 
@@ -86,7 +86,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 3. **Persona** — named authorities + synthesis paragraph
 4. **Rules** — behavioral rules; "Be direct, not diplomatic" is always first
 5. **Task** — operational logic: dispatch, scoping questions, preconditions for output
-6. **Key concepts (optional)** — canonical reference layer; add entries only when needed across more than one section
+6. **Resources (optional)** — canonical reference layer; add entries only when needed across more than one section
 
 ### The conversational/operational axis
 
@@ -120,9 +120,9 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 
 **Fixed first rule** — "Be direct, not diplomatic" is always the first rule, verbatim (see template).
 
-### Key concepts design
+### Resources design
 
-**What key concepts are** — The canonical reference layer: vocabulary, frameworks, assumptions, and construction guidance applied consistently across more than one section or file.
+**What resources are** — The canonical reference layer: vocabulary, frameworks, assumptions, and construction guidance applied consistently across more than one section or file.
 
 **Types** — Four types of content belong here:
 - **Shared vocabulary** — terms or patterns the skill uses in a specific, non-obvious way. Define them once; reference them from wherever they're needed.
@@ -130,7 +130,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 - **Operating assumptions** — things the skill takes as given about the context, the user, or the domain; not rules, but starting conditions.
 - **Shared construction guidance** — instructions for how to build or evaluate a skill section that multiple flows need to apply the same way.
 
-**When to add** — Add an entry when a concept needs consistent application across more than one section and each would otherwise define it independently. Persona, rules, and key concepts can touch the same concept at different abstraction levels — intentional reinforcement, not duplication.
+**When to add** — Add an entry when a concept needs consistent application across more than one section and each would otherwise define it independently. Persona, rules, and resources can touch the same concept at different abstraction levels — intentional reinforcement, not duplication.
 
 **Structure** — Each entry follows this format:
 
@@ -138,7 +138,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 
 ### Full skill vs. SKILL.md
 
-**SKILL.md** — The entry point file; always loaded, contains the dispatcher, persona, rules, and key concepts.
+**SKILL.md** — The entry point file; always loaded, contains the dispatcher, persona, rules, and resources.
 
 **The full skill** — The complete set of files that define the skill's behavior: SKILL.md plus the contents of `references/`, `examples/`, and `scripts/` (if present). When editing, reviewing, or reasoning about a skill's behavior, the relevant scope is the full skill — not just the entry point.
 
@@ -146,7 +146,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 
 **What it is** — SKILL.md is the always-loaded entry point. Everything else loads on demand — zero context tokens until read. Load only what the current task requires.
 
-**When to split** — Split when content is flow-specific, not when you hit a line count (~500 is a soft signal). Other triggers: distinct modes rarely needed together; content belonging to a specific flow rather than shared key concepts.
+**When to split** — Split when content is flow-specific, not when you hit a line count (~500 is a soft signal). Other triggers: distinct modes rarely needed together; content belonging to a specific flow rather than shared resources.
 
 **Folder structure** —
 
@@ -256,7 +256,7 @@ If no argument is provided, ask:
 
 ---
 
-## Key concepts
+## Resources
 
-[Optional. Add entries for vocabulary, frameworks, assumptions, or construction guidance reused across sections. See Key concepts design for when and how.]
+[Optional. Add entries for vocabulary, frameworks, assumptions, or construction guidance reused across sections. See Resources design for when and how.]
 ```
