@@ -28,7 +28,7 @@ If option 1 is chosen, follow up by asking:
 
 > 1. What is the end state you want to reach?
 > 2. How do you want the skill to behave specifically?
-> 3. What behaviour/s do you specifically NOT want to change?
+> 3. What behavior/s do you specifically NOT want to change?
 
 Otherwise, if option 2 is chosen, follow up by asking:
 
