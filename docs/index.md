@@ -8,8 +8,8 @@ The authoritative index of all documentation in this project. Every `.md` file u
 - Skill design
     - [Overview](./skill-design/overview.md)
     - [Axis](./skill-design/axis.md)
-    - [Persona](./skill-design/persona.md)
-    - [Rules](./skill-design/rules.md)
+    - [Authorities](./skill-design/authorities.md)
+    - [Guidelines](./skill-design/guidelines.md)
     - [Task](./skill-design/task.md)
     - [Resources](./skill-design/resources.md)
 - Wizard

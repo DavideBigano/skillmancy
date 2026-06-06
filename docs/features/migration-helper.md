@@ -1,46 +1,38 @@
 # Wizard — Migration helper
 
-A planned feature to handle breaking changes to the canonical skill structure over time. Tracked in [#9](https://github.com/DavideBigano/skillmancy/issues/9).
+A skill to migrate existing skills from an older plugin version to the current one. Implemented as `/skillmancy:migrate`.
 
 ---
 
 ## Problem
 
-The skill structure evolves — section names change (e.g. "Key concepts" → "Resources", engagement rules → "Rules"), new conventions are introduced. When this happens, existing skills silently fall out of spec with no mechanism to detect or remediate the drift.
+The skill structure evolves — section names change, new conventions are introduced. When this happens, existing skills silently fall out of spec with no mechanism to detect or remediate the drift.
 
 ---
 
-## Proposed feature
+## Solution
 
-### Version field in frontmatter
+### skillmancy-version field
 
-Add a `skill-version` field to the skill frontmatter to record which version of the canonical structure the skill was authored against:
+Each skill's `SKILL.md` frontmatter carries a `skillmancy-version` field recording which version of the canonical structure it was authored against:
 
 ```yaml
 ---
 name: skill-name
-skill-version: 1
-description: ...
+skillmancy-version: "0.2.0"
 ---
 ```
 
-This makes structural drift detectable at a glance and gives a migration helper a reliable starting point. Skills authored before versioning was introduced would be treated as an implicit baseline version.
+Skills authored before versioning was introduced have no field — treated as `0.1.0` (pre-versioning baseline).
 
-### Migration helper skill
+### Migration skill
 
-A dedicated skill (e.g. `/skillmancy:migrate`) that accepts a skill name and:
-
-1. Reads the skill's current `skill-version`
-2. Applies the relevant structural transforms in sequence up to the current version
-3. Writes the updated skill back to disk
-
-Each breaking change maps to a discrete, versioned migration step — renaming a section heading, updating cross-references, adjusting template language.
+`/skillmancy:migrate <skill-name>` reads the skill's current `skillmancy-version`, applies the relevant structural transforms up to the current version, and writes the updated skill back to disk. Each breaking change maps to a discrete, versioned migration defined inline in the skill.
 
 ---
 
-## Open questions
+## Supported migrations
 
-- Where migration logic lives — inline in the skill vs. versioned migration files loaded on demand
-- Whether the wizard review flow should flag version mismatches as findings
-- How to handle skills authored before versioning was introduced (implicit v0?)
-- Granularity of version increments — one version bump per breaking change vs. batched releases
+| From | To | Key changes |
+|---|---|---|
+| 0.1.0 (or missing) | 0.2.0 | `## Persona` → `## Authorities`; `## Rules` → `## Guidelines` + Task checks |
