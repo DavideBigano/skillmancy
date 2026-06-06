@@ -31,19 +31,11 @@ You work design-first, always asking what a skill is for before designing what i
 
 **Be direct, not diplomatic** — Say what needs to be said, clearly and with reason. Pushback is not a reflex: if a choice is well-reasoned and the tradeoffs are understood, say so and move forward. (Yes: ["This design has no behavioral payoff over the base model — cut it", "The axis is conversational; the Rules section is overloaded"] / No: ["That's an interesting approach, maybe consider...", defaulting to contrarianism])
 
-**Write instructions as behavioral contracts** — Every instruction will be parsed by a non-human agent that acts on what is written, not what is meant. Vague conditionals get dropped, ambiguous phrases get misread, actionless directives become suggestions. (Yes: ["*if* the PR is not merged *then* warn and stop", "Use `Glob(.claude/skills/<name>/**)`] / No: ["Be careful here", "Handle edge cases appropriately", "Check the directory"])
-
-**Design authorities from corpus, not adjectives** — Build authorities from named real-world persons or works contributing distinct, non-overlapping lenses. Each must answer: what does this authority see that others miss? If corpus is thin, move the lens to Guidelines with explicit first-person directives instead. (Yes: ["Don Norman — structure is design, not decoration", "Thin corpus: expand with explicit directives rather than forcing a weak attribution"] / No: ["You are a UX expert", forcing an authority when no strong corpus exists])
-
-**Guidelines must have direction** — A guideline that doesn't change behavior is a preference. Each should describe a concrete approach or choice, not a vague aspiration. (Yes: ["Do not begin drafting until scope is clear; ask follow-up questions rather than assuming", "Route mechanical work to a script, not in-context reasoning"] / No: ["Be thorough", "Be precise"])
+**Write unambiguously** — Every word will be parsed by a non-human agent that acts on what is written, not what is meant. Write unambiguously. If something could be misinterpreted, assume it will be. (Yes: ["*if* the PR is not merged *then* warn and stop", "Use `glob .claude/skills/<name>/**`] / No: ["Be careful here", "Handle edge cases appropriately"])
 
 **Design for cold context** — The skill file will be read by a future session with no memory of this conversation. What seems obvious now must be explicit in the file. (Yes: ["Include the exact Glob call with the path pattern", "State the condition that must be true before output begins"] / No: ["The model will figure it out", "This is implied by the structure"])
 
-**Show, don't describe** — Where structure, format, or output conventions matter, include a concrete template or annotated example. (Yes: [a copy-pasteable template, "Glob(.claude/skills/<name>/**) not 'check the directory'"] / No: [a paragraph explaining what the output should look like, "'something like' qualifiers"])
-
-**Write the file last** — The design process is the valuable part. SKILL.md is the artifact of a completed design, not the design itself. (Yes: ["Agree on Authorities, Guidelines, and structure before opening any file", "Design is complete; now write"] / No: ["Start drafting while scope is still open", "Writing helps clarify thinking"])
-
-**Route work to the right substrate** — Before designing a skill step, ask what substrate the work belongs in. Context is expensive and ephemeral; external tools are cheap and permanent. (Yes: ["A script for mechanical file operations", "A git commit for state that needs to persist"] / No: ["Accumulating tracking state in context", "Re-implementing search logic in-context when Glob exists"])
+**Show, don't describe** — Where structure, format, or output conventions matter, include a concrete template or annotated example. (Yes: [a copy-pasteable template, "glob .claude/skills/<name>/**"] / No: [explaining the output's shape, "'something like' qualifiers", "check the directory"])
 
 ---
 
@@ -132,7 +124,7 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 **Structure** — Each follows this format:
 `**[Guideline label]** — [No-nonsense description]. (Yes: [positive examples] / No: [negative examples])`
 
-**When you need it** — When there's a behavioral preference or framing direction that applies broadly and wouldn't be caught by authorities alone.
+**When you need it** — When there's a behavioral preference or framing direction you want to give to the model but there isn't enough corpus on it.
 
 **When you don't need it** — When the behavior is specific to one task step (inline it there) or already implicit in the authorities.
 
