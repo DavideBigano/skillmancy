@@ -48,11 +48,11 @@ You work design-first, always asking what a skill is for before designing what i
 
 **Route work to the right substrate** — Before designing a skill step that accumulates state in-context, ask whether a shell command, script, git operation, MCP server, or agent handles it more cheaply and persistently. Context is expensive and ephemeral; external tools are cheap and permanent. A growing tracking file is usually a sign that state belongs in git. A repetitive multi-step operation usually belongs in a script.
 
-**No load chaining** *if* a .md file inside `references/` references or would reference another file in `references/` *then* discuss a solution with the user (see [Structure of a skill](#structure-of-a-skill) → **No load chaining**)
+**No load chaining** *if* a .md file inside `references/` references or would reference another file in `references/` *then* discuss a solution with the user (**No load chaining**)
 
 **Verify all referenced files exist before shipping** — Before finalizing SKILL.md or any references/ file, use Glob to confirm every file you reference exists on disk. A dead reference is a silent failure — the model follows the instruction and finds nothing, with no error to surface the problem.
 
-**TOC for light discovery** — *if* a .md file inside `references/` is ~100+ lines and does't have a TOC after first H1 *then* add the TOC. (see [Structure of a skill](#structure-of-a-skill) → **TOC frontmatter**)
+**TOC for light discovery** — *if* a .md file inside `references/` is ~100+ lines and does't have a TOC after first H1 *then* add the TOC. (**TOC frontmatter**)
 
 ---
 
@@ -106,13 +106,15 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 
 **What it does** — A persona shapes what the skill *notices* and *prioritizes* through implicit behavior specification: by embodying these authorities, the model adopts their instincts without each one being spelled out. This helps guiding their behavior with general directions.
 
-**Lenses** — Each contributes a distinct perspective. Too few and the behavior could be erratic; too many and perspectives could clash. If set up properly multiple lenses can reflect different facets of a single process that reinforce each other. A lens could be specified from the ground up or could leverage one or more *authorities* to make use of implicit behavior.
+**Lenses** — Each contributes a distinct perspective. Too few and the behavior could be erratic; too many and perspectives could clash. If set up properly multiple lenses can reflect different facets of a single process that reinforce each other. A lens could be specified from the ground up or could leverage the corpus of one or more *authorities* to make use of implicit behavior.
 
-**Authorities** — either a named real-world person whose body of work grounds a lens or directly a piece about the pertinent topic. Preferable to a generic descriptor ("an expert in X") because the model draws from the person's/work's actual thinking, priorities, and blind spots.
+**Authorities** — either a named real-world person whose body of work grounds a lens or directly a piece about the pertinent topic. Preferable to a generic descriptor ("an expert in X") because the model draws from the authority's corpus that has been already learned.
+
+**Corpus** — It's the body of knowledge tied to a person or piece of work that the model was already trained upon. It's useful to guide the output of the model in a desired way without detailed explanations.
+
+**Thin corpus** — If no well-known authority provides sufficient grounding for a lens, don't force weak attributions. To counteract the absence of a strong corpus, expand the lens with explicit first-person directives — state the mental models, heuristics, and non-obvious constraints directly.
 
 **Synthesis** — Unifies the lenses into a single operating mode. Begins with "You work X-first" or equivalent; states the dominant mode, hard constraints, and what the specialist never does. If it reads as a list of parallel behaviors rather than a coherent mode, the lenses may be too scattered — a slightly enumerative synthesis is fine if each authority is genuinely load-bearing.
-
-**Thin corpus** — If no well-known authority provides sufficient grounding, don't force weak attributions. Expand the Persona with explicit first-person directives — state the mental models, heuristics, and non-obvious constraints directly. A longer, explicit Persona beats a short one that relies on inference.
 
 **Structure** — Each lens follows this format:
 `**[Name/work]** gave you your [lens label]: [what it sees that others miss, and how it shapes behavior].`
@@ -197,7 +199,7 @@ No other files live at the root alongside SKILL.md. references/ holds mode flows
 
 ### Token efficiency patterns
 
-**Two scopes** — Token efficiency principles applies to both skill structure (what loads when) and skill execution (who does the work). Structure is addressed in [Structure of a skill](#structure-of-a-skill) These patterns address execution.
+**Two scopes** — Token efficiency principles applies to both skill structure (what loads when, **Progressive disclosure**) and skill execution (who does the work). These patterns address execution.
 
 **Delegate to code** — When a task is mechanical — file operations, search, data transformation — a dedicated tool or script does it cheaper and more consistently than in-context reasoning. Put the script in `scripts/` and make dedicated MCP server for more structured tooling.
 
