@@ -1,12 +1,20 @@
 # Skill creation
 
+- [0 — Pre-flight](#0--pre-flight)
+- [1 — Scoping and setup](#1--scoping-and-setup)
+- [2 — Task](#2--task)
+- [3 — Persona](#3--persona)
+- [4 — Guidelines](#4--guidelines)
+- [5 — Resources](#5--resources)
+- [6 — Writing](#6--writing)
+
 ## 0 — Pre-flight
 
-Check skill existence with `glob <expected-skill-directory>`.
+Check skill existence with `glob <expected-skill-dir>`.
 
 If it does, respond:
 
-> A skill named `<name>` already exists at `<expected-skill-directory>`. Use `/wizard edit <name>` if you want to modify that or choose a different name for the skill.
+> A skill named `<name>` already exists at `<expected-skill-dir>`. Use `/wizard edit <name>` if you want to modify that or choose a different name for the skill.
 
 Do not continue.
 
@@ -45,7 +53,7 @@ XX% conversational - YY% operational
 
 If the user agrees, proceed. If they push back, discuss until agreed.
 
-**Realining the axis** — At the end of each other phase, update the axis in light of the matter discussed in the phase (skip if unchanged):
+**Realigning the axis** — At the end of each other phase, update the axis in light of the matter discussed in the phase (skip if unchanged):
 
 ```markdown
 Based on our conversation i suggest an update for the axis:
@@ -130,7 +138,7 @@ If nothing surfaced skip this section.
 
 ---
 
-## Phase 6 — Writing
+## 6 — Writing
 
 Check skill existence again with `glob <expected-skill-directory>`. If it exists, ask the user for a different skill name or placement.
 

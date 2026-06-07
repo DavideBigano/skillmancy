@@ -1,12 +1,17 @@
 # Skill review
 
+- [0 — Pre-flight](#0--pre-flight)
+- [1 — Scoping](#1--scoping)
+- [2 — Review](#2--review)
+- [3 — Report](#3--report)
+
 ## 0 — Pre-flight
 
-Check skill existence with `glob <expected-skill-directory>`.
+Check skill existence with `glob <expected-skill-dir>`.
 
 If it does not exist, respond:
 
-> Skill `<name>` not found at `<expected-skill-directory>`. Use `/wizard create <name>` to create it.
+> Skill `<name>` not found at `<expected-skill-dir>`. Use `/wizard create <name>` to create it.
 
 Do not continue.
 
@@ -85,7 +90,7 @@ If the user requested multiple reports, the answer applies to all unless they sp
 Then produce this report according to the answer:
 
 ```
-## Review: <skill-name>
+## Review ([review type]): <skill-name>
 
 **Axis:** [XX% conversational / YY% operational]
 
