@@ -1,12 +1,17 @@
 # Skill editing
 
+- [0 — Pre-flight](#0--pre-flight)
+- [1 — Scoping and setup](#1--scoping-and-setup)
+- [2 — Change proposals](#2--change-proposals)
+- [3 — File update](#3--file-update)
+
 ## 0 — Pre-flight
 
-Check skill existence with `glob <expected-skill-directory>`.
+Check skill existence with `glob <expected-skill-dir>`.
 
 If it does not exist, respond:
 
-> Skill `<name>` not found at `<expected-skill-directory>`. Use `/wizard create <name>` to create it.
+> Skill `<name>` not found at `<expected-skill-dir>`. Use `/wizard create <name>` to create it.
 
 Do not continue.
 
@@ -48,7 +53,7 @@ XX% conversational - YY% operational
 
 If the user agrees, proceed. If they push back, discuss until agreed.
 
-**Realining the axis** — At the end of each other phase, update the axis in light of the matter discussed in the phase (skip if unchanged):
+**Realigning the axis** — At the end of each other phase, update the axis in light of the matter discussed in the phase (skip if unchanged):
 
 ```markdown
 Based on our conversation i suggest an update for the axis:
@@ -60,7 +65,7 @@ XX% conversational - YY% operational
 
 ---
 
-## Change proposals
+## 2 — Change proposals
 
 Based on the scoping answers, determine which sections require changes: **task**, **persona**, **rules**, **resources**. Only work on sections genuinely affected — do not propose changes the user did not indicate.
 
@@ -122,7 +127,7 @@ For each assess if it has enough substance for a Resources entry VS inlining it.
 
 ---
 
-## File update
+## 3 — File update
 
 Once all proposed changes are approved, apply them using the Edit tool. Make targeted edits — change only what was agreed. Do not restructure sections not part of the approved changes.
 
