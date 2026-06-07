@@ -1,44 +1,44 @@
 # Skill editing
 
-## Pre-flight
+## 0 — Pre-flight
 
-Use Glob to check whether `.claude/skills/<name>/` exists.
+Check skill existence with `glob <expected-skill-directory>`.
 
-If it does not, respond:
+If it does not exist, respond:
 
-> No skill named `<name>` found at `.claude/skills/<name>/`. Use `/skillmancy:wizard create <name>` to create it.
+> Skill `<name>` not found at `<expected-skill-directory>`. Use `/wizard create <name>` to create it.
 
 Do not continue.
 
-If it exists, read the full skill: SKILL.md and all files in `references/`, `examples/`, and `scripts/`. Every file must be read before the edit begins — the edit covers the full skill, not just SKILL.md.
+If it exists, read the full skill.
 
 ---
 
-## Scoping
+## 1 — Scoping and setup
 
-**Important**: skip asking a question if it's answer can be clearly derived from the context. If this flow is being called after a review ask the user what points they want you to work on. 
+**Derive from context** — Skip questions that can be clearly answered by information in context. If this flow is being called after a review ask the user what points they want you to work on. 
 
-Use the `AskUserQuestion` tool to ask:
+**Scoping questions** — Use the `AskUserQuestion` tool to ask:
 
 > How do you want to approach this edit?
 > 1. **Top-down** — I have a goal in mind with no clear path to reach it.
 > 2. **Bottom-up** — I already know the implementation details.
 
-If option 1 is chosen, follow up by asking:
+If option 1, ask:
 
-> 1. What is the end state you want to reach?
-> 2. How do you want the skill to behave specifically?
-> 3. What behavior/s do you specifically NOT want to change?
+> What is the end state you want to reach?
+> How do you want the skill to behave specifically?
+> What behavior/s do you specifically NOT want to change?
 
-Otherwise, if option 2 is chosen, follow up by asking:
+Otherwise, if option 2, ask:
 
-> 1. Which part/s do you want to change?
-> 2. How do they need to change?
-> 3. What part/s do you NOT want to touch?
+> Which part/s do you want to change?
+> How do they need to change?
+> What part/s do you NOT want to touch?
 
-If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation on the unclear point. The phase ends only when all three have concrete, actionable answers.
+If any answer is too vague to identify which sections need editing and why, do not proceed. Enter a refinement conversation on the unclear point until all answers are concrete and actionable.
 
-**Determining the axis position** — Based on what has been agreed, state where the skill sits:
+**Determining the axis** — Based on what has been agreed, state where the skill sits:
 
 ```markdown
 XX% conversational - YY% operational
@@ -66,58 +66,59 @@ Based on the scoping answers, determine which sections require changes: **task**
 
 For each affected section:
 
-1. **Present the current behavior** — quote or summarize the relevant part of the existing skill.
-2. **Propose the new behavior** — if scoping provides enough direction, make a concrete proposal. If not, ask a targeted clarifying question first.
-3. **Refine until approved** — iterate through conversation if the user pushes back. Do not move to the next section until the current one is approved.
+1. **Present the current behaviors** — quote or summarize the relevant parts of the existing skill.
+2. **Propose the new behaviors** — if scoping provides enough direction, make concrete proposals. If not, ask targeted clarifying questions first.
+3. **Refine until approved** — iterate through conversation until user approves.
 
-Work through sections in this order: task → persona → rules → resources. If the user asks to address them in a different order, allow it.
+Next, some section-specific clarification.
 
 ### Task changes
 
-1. Ask the user to describe what the skill should do and how it should do it. Refine through conversation until the task is specific enough to be represented as a flowchart
-2. Once the task flow is agreed, generate the filename: 
+The model may use mermaid flowcharts as an helper to discuss the changes. Create flowcharts using the following command verbatim:
 
-```
-Bash(
+```bash
     ts=$(date +%Y-%m-%d-%H-%M-%S) && touch "skill-flow-${ts}.md" && cat > "skill-flow-${ts}.md" << 'EOF'
     <mermaid flowchart covering the skill's full task flow>
     EOF
-)
 ```
-
-3. Present the file path to the user and wait for explicit approval before proceeding
-4. When the user approves, remind them:
-
-> Remember to delete `skill-flow-<timestamp>.md` once the skill is written.
 
 ### Persona changes
 
-For each authority being added, changed, or replaced, state:
+For each authority being added or changed state, with reference to points discussed:
 
-- The lens it contributes
-- Why it belongs here — referencing a specific point from the scoping discussion or an existing part of the skill it connects to
+- How it contributes
+- Why it belongs here
 
 For each authority being removed, explain what gap this leaves and whether anything needs to compensate.
 
-If the corpus for this domain is thin, flag it explicitly and prompt the user to define the persona manually.
+If the corpus for a persona is thin, flag it explicitly and prompt the user to drop it or define it as a guideline.
 
-### Rule changes
+### Guideline changes
 
-For each rule being added, changed, or removed, state:
+For each guideline being added or changed state, with reference to points discussed:
 
-- The rule
-- Why this change — referencing the specific behavior or gap identified in scoping
+- How it contributes
+- Why it belongs here
+
+For each guideline being removed, explain what gap this leaves and whether anything needs to compensate.
+
+"Be direct, not diplomatic" is always the first guideline, verbatim. It requires no rationale.
+
+If any guideline needs adjustment or if the they want to add their own, switch to a conversation. Phase ends with user approval for all guidelines.
 
 ---
 
 ### Resources changes
 
-For each entry being added, changed, or removed, state:
+For each entry being added, changed, or removed state, with reference to points discussed:
 
 - The concept, its type (shared vocabulary, framework, or assumption), and what it defines
-- Why this change — referencing the specific gap or redundancy identified in scoping
+- Why this change
 
 For entries being removed, check whether any sections that pointed to them need to be updated inline.
+
+For each assess if it has enough substance for a Resources entry VS inlining it. Then check for excessive redundancy. Flag findings for discussion
+
 
 ---
 
@@ -127,4 +128,4 @@ Once all proposed changes are approved, apply them using the Edit tool. Make tar
 
 If scope has grown to the point where a full rewrite is warranted, say so explicitly before proceeding.
 
-Before finalizing, `Glob(.claude/skills/<name>/**)` to list all files. Check each for dead references and flag any to the user — let them decide whether to remove, update, or create the missing file.
+Use `glob <skill-directory>/**/*` to list all files. Check each for dead references and flag any to the user — let them decide whether to remove, update, or create the missing file.
