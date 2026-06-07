@@ -17,3 +17,7 @@ assignees: ''
 ## Expected behavior
 
 <!-- What should happen instead? -->
+
+## Depends on
+
+<!-- List any issues that must be resolved before this one. Use #<number>. Remove section if none. -->

@@ -13,3 +13,7 @@ assignees: ''
 ## Why
 
 <!-- Why is this needed now? -->
+
+## Depends on
+
+<!-- List any issues that must be resolved before this one. Use #<number>. Remove section if none. -->

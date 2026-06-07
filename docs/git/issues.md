@@ -21,6 +21,22 @@ Types follow the same convention as branches:
 
 The body should briefly explain what needs doing and why. Enough context for someone picking it up cold.
 
+### Discussion issues
+
+For unresolved design questions, use `--label discussion` instead of a type prefix:
+
+```
+gh issue create --label discussion --title "[Enhancement] <question or decision to make>" --body "<body>"
+```
+
+Discussion issues capture open questions that need a decision before work can begin. They are not tasks — they are prompts for a design conversation. Use `[Enhancement]` as the title type since most design questions lead to an addition or change.
+
+To create the `discussion` label if it doesn't exist:
+
+```
+gh label create discussion --color "#e4e669" --description "Open design question requiring a decision"
+```
+
 ## Listing open issues
 
 ```
