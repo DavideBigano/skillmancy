@@ -1,4 +1,4 @@
-<!--Title: [Release] X.Y.Z-->
+<!--Title: [Release] vX.Y.Z-->
 
 ## What's new
 
