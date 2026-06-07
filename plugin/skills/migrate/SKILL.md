@@ -31,16 +31,21 @@ You work migration-first: read before writing, propose before applying, confirm 
 
 ## Task
 
-Parse the argument as `<skill-name>`. If absent, respond with `Usage: /skillmancy:migrate <skill-name>` and stop.
+Derive `<expected-skill-dir>` = `--skill-dir` (defaults to `.claude/skills/`).
 
-1. Locate the skill: try `Glob(.claude/skills/<skill-name>/SKILL.md)` then `Glob(plugin/skills/<skill-name>/SKILL.md)`. If not found, report and stop.
+Parse the argument as `<skill-name>`. If absent, respond with `Usage: /migrate <skill-name>` and stop.
 
-2. Read `SKILL.md`. Extract `skillmancy-version` from frontmatter. If absent, treat as `0.1.0`.
+Locate the skill: try `glob <expected-skill-dir>/<skill-name>`
 
-3. Determine the applicable migration:
-   - `0.1.0` (or missing) → `0.2.0`: follow the steps in **Migration: 0.1.0 → 0.2.0** below
-   - Already at `0.2.0`: report "Skill is already at skillmancy-version 0.2.0. Nothing to do." and stop.
-   - Unknown version: report the version found and stop.
+Read the full skill. Extract `skillmancy-version` from frontmatter. If absent, treat as `0.1.0`.
+
+Determine the applicable migration:
+
+| Version found | Action |
+|---|---|
+| `0.1.0` or missing | Follow **Migration: 0.1.0 → 0.2.0** below |
+| `0.2.0` | Report "Skill is already at skillmancy-version 0.2.0. Nothing to do." and stop |
+| Unknown | Report the version found and stop |
 
 ---
 
@@ -56,7 +61,7 @@ If `skillmancy-version` is absent, add `skillmancy-version: "0.1.0"` to establis
 
 - Change the section heading.
 - In the intro sentence, replace any reference to "lenses" with "authorities".
-- Identify any thin-corpus lens (no well-known real-world person or work grounds it). Present it as a candidate for removal and confirm before deleting. Update the synthesis paragraph to remove any sentence referencing the removed lens.
+- Identify any thin-corpus lens (no well-known real-world person or work grounds it). Present it as a candidate for removal or to be made into a guideline. Update the synthesis paragraph to remove any sentence referencing the removed lens.
 
 **Step 3 — Migrate `## Rules` → `## Guidelines` + Task**
 
@@ -65,8 +70,7 @@ For each rule, propose a destination:
 | Destination | Criteria |
 |---|---|
 | `## Guidelines` | Broad behavioral direction applying across the whole skill |
-| Task inline step | A process step specific to one mode or flow |
-| Task always-on check | An if/then check that applies before every output |
+| Task step | A process step specific to one mode or flow |
 | Remove | Already covered by an authority or guideline |
 
 Present the full disposition table and wait for approval. Then:
@@ -76,14 +80,11 @@ Present the full disposition table and wait for approval. Then:
 
 **Step 4 — Update Resources section**
 
-- Rename `### Persona design` → `### Authorities design` (if present); update body text.
-- Rename `### Rules design` → `### Guidelines design` (if present); update body text.
-- Update the Anatomy list: `**Persona**` → `**Authorities**`, `**Rules**` → `**Guidelines**`.
-- Update any remaining references to "Persona" or "Rules" as section names.
+Update any reference to "Persona" and "Lenses" in "Authority" and to "Rules" in "Guidelines".
 
 **Step 5 — Update blank template (if present)**
 
-If the skill contains a blank template block, update it: `## Persona` → `## Authorities`, `## Rules` → `## Guidelines`, rule format → guideline format.
+Update any reference to "Persona" and "Lenses" in "Authority" and to "Rules" in "Guidelines".
 
 **Step 6 — Set `skillmancy-version` to `0.2.0`**
 
@@ -94,3 +95,5 @@ Update the frontmatter field. Report: "Migration complete. skillmancy-version up
 ## Resources
 
 **skillmancy-version** — The version of the canonical skill structure the skill was authored against, stored in the skill's SKILL.md frontmatter. Absent means 0.1.0 (pre-versioning baseline).
+
+**The full skill** — The complete set of files inside the skill's directory and subdirectories. 
