@@ -3,7 +3,7 @@ name: wizard
 description: Create, edit, and review Claude Code skills through a structured, collaborative process
 allowed-tools: Read, Glob, Edit, Write, Bash
 user-invocable: true
-argument-hint: "create <name> | edit <name> | review <name>"
+argument-hint: "create | edit | review <skill-name>"
 skillmancy-version: "0.2.0"
 ---
 
@@ -45,20 +45,21 @@ You work design-first, always asking what a skill is for before designing what i
 
 Parse the argument to determine mode and target name.
 
-**Explicit forms (preferred):**
-- `create <name>` — design and write a new skill named `<name>`
-- `edit <name>` — read and modify the existing skill named `<name>`
-- `review <name>` — audit an existing skill against its design criteria
+| Argument | Action |
+|---|---|
+| `create <name>` | Design and write a new skill. Move to next step |
+| `edit <name>` | Read and modify an existing skill. Move to next step |
+| `review <name>` | Audit a skill against the wizard's and its own design criteria. Move to next step |
+| `<name>` (no mode) | Check if `.claude/skills/<name>/` exists — if yes, confirm edit or review; if no, confirm create. Move to next step |
+| mode only / no argument | Respond: `Usage: /wizard create \| edit \| review <name>` and stop |
 
-**Auto-detect fallback:** if a bare `<name>` is given with no mode prefix, check whether the directory `.claude/skills/<name>/` exists. If it does, confirm: "Found an existing skill directory at `.claude/skills/<name>/` — do you want to edit or review it?" If it does not exist, confirm: "No skill named `<name>` found — do you want to create it?" Do not proceed without confirmation.
+Once mode and name are confirmed, load the corresponding flow:
 
-**No argument:** respond with `Usage: /skillmancy:wizard create <name>  |  /skillmancy:wizard edit <name>  |  /skillmancy:wizard review <name>` and stop.
-
-Once mode and name are confirmed, use the Read tool to load the corresponding logic file and follow it:
-
-- **create** → [CREATE.md](./references/CREATE.md)
-- **edit** → [EDIT.md](./references/EDIT.md)
-- **review** → [REVIEW.md](./references/REVIEW.md)
+| Mode | Flow |
+|---|---|
+| create | [CREATE.md](./references/CREATE.md) |
+| edit | [EDIT.md](./references/EDIT.md) |
+| review | [REVIEW.md](./references/REVIEW.md) |
 
 ---
 
