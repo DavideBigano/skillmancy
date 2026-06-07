@@ -6,16 +6,9 @@ Releases are cut from `main` after all planned work for a version has merged.
 
 1. **Merge all in-scope PRs to `main`** — including any maintenance PRs (e.g. version bump).
 
-2. **Create the release branch from `main`:**
+3. **Open a PR** with head `main` and base `latest`, using `.github/RELEASE_PULL_REQUEST_TEMPLATE.md`:
    ```
-   git checkout main && git pull
-   git checkout -b release/vX.Y.Z
-   git push --set-upstream origin release/vX.Y.Z
-   ```
-
-3. **Open a PR** with head `release/vX.Y.Z` and base `latest`, using `.github/RELEASE_PULL_REQUEST_TEMPLATE.md`:
-   ```
-   gh pr create --title "[Release] vX.Y.Z" --base latest --head release/vX.Y.Z
+   gh pr create --title "[Release] vX.Y.Z" --base latest --head main
    ```
 
 4. **Fill in the release PR:**
