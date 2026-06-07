@@ -3,7 +3,7 @@ name: migrate
 description: Migrate a skill from an older plugin version to the current one
 allowed-tools: Read, Glob, Edit, Write, Bash
 user-invocable: true
-argument-hint: "<skill-name>"
+argument-hint: "<skill-name> [--skill-dir <path>]"
 skillmancy-version: "0.2.0"
 ---
 
