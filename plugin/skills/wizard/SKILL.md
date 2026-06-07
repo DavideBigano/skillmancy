@@ -37,6 +37,8 @@ You work design-first, always asking what a skill is for before designing what i
 
 **Show, don't describe** — Where structure, format, or output conventions matter, include a concrete template or annotated example. (Yes: [a copy-pasteable template, "glob .claude/skills/<name>/**"] / No: [explaining the output's shape, "'something like' qualifiers", "check the directory"])
 
+**Avoid load chaining** — Each time a skill file mentions another one, for the model too see it requires an additional fetch. This compounds with depth. Whenever possible try avoiding splitting files below ~500/~1000 total lines. Consider splitting when there are long, conditionally loaded branches, big content sections needed in multiple points or if a big section is needed later in execution. (Yes: ["All modes fit in one SKILL.md under 800 lines — keep it flat", "Phase 3 is only reached in create mode and runs to 400 lines — split it"] / No: ["Reference PHASE2.md from PHASE1.md so each phase stays short", "Split into CORE.md and EXTENDED.md and load both upfront"])
+
 ---
 
 ## Task
@@ -57,15 +59,6 @@ Once mode and name are confirmed, use the Read tool to load the corresponding lo
 - **create** → [CREATE.md](./references/CREATE.md)
 - **edit** → [EDIT.md](./references/EDIT.md)
 - **review** → [REVIEW.md](./references/REVIEW.md)
-
-**Before designing (create mode):**
-- Challenge the premise: ask what this skill does that the base model doesn't already do well, and what specialist behavior justifies it. A skill that only adds a system prompt is a prompt, not a skill. Push back if there's no clear answer.
-- Establish the axis: ask explicitly where the value lives — in the dialogue (conversational) or in the artifact (operational). This determines how much weight to give Authorities and Guidelines versus Task instructions.
-
-**Always-on checks (all modes, before shipping):**
-- *No load chaining*: if a `references/` file references or would reference another `references/` file, stop and discuss a solution with the user. (See **No load chaining** in Resources.)
-- *Verify references*: use Glob to confirm every file referenced in SKILL.md or any `references/` file exists on disk. A dead reference is a silent failure.
-- *TOC*: if a `references/` file is ~100+ lines and has no TOC after the first H1, add one. (See **TOC frontmatter** in Resources.)
 
 ---
 
@@ -154,13 +147,13 @@ Add reference to a specific section if needed.
 
 **SKILL.md** — The entry point file; always loaded, contains the dispatcher, authorities, guidelines, and resources.
 
-**The full skill** — The complete set of files inside the skill's directory. When editing, reviewing, or reasoning about a skill's behavior, the relevant scope is the full skill — not just the entry point.
+**The full skill** — The complete set of files inside the skill's directory and subdirectories. When editing, reviewing, or reasoning about a skill's behavior, the relevant scope is the full skill — not just the entry point.
 
 **Progressive disclosure (aka JIT)** — The concept of loading only the necessary skill files when needed, to avoid overfilling the context window with useless material.
 
 **When to split** — Split from `SKILL.md` when content wouldn't be loaded on every skill invocation, not necessarily when you hit a line count (even though ~500 lines is a soft signal). Some triggers: conditional execution, context-dependant loading, excessive length (1000+ lines).
 
-**Folder structure** — Template of folder structure to follow:
+**Folder structure** — Template of suggested folder structure. User may choose different setup:
 ```
 skill-name/
 ├── SKILL.md              # Always loaded: dispatcher + shared context
@@ -183,7 +176,7 @@ skill-name/
 
 No other files live at the root alongside SKILL.md. references/ holds mode flows, domain branches, and any concepts or details that belong to a specific flow rather than shared context. examples/ and scripts/ are asset directories — include them only when the skill uses them.
 
-**No load chaining** — Never route a load instruction from a `references/` file to another `references/` file — this creates chaining that multiplies model trips and compounds the cost of progressive disclosure without delivering its benefits. Allow references to other directories for context-dependant loading.
+**Load chaining** — Structuring skill files to load in a chain may be useful for tasks made up of big chunks (in the order of magnitude of ~1000 lines) but in shorter skills this multiplies model trips to load all the pieces and compounds the cost of progressive disclosure without delivering its benefits.
 
 **TOC frontmatter** — No hard limit for references/ files; files over 100 lines warrants a table of contents after the first H1 because models tend to read the first lines to get an idea of the content. Similar to SKILL.md's frontmatter.
 
