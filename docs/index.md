@@ -3,8 +3,8 @@
 The authoritative index of all documentation in this project. Every `.md` file under `docs/` (except this file) has an entry here.
 
 - Git
-    - [Workflow](./git/workflow.md)
     - [Issues](./git/issues.md)
+    - [Releases](./git/releases.md)
 - Skill design
     - [Overview](./skill-design/overview.md)
     - [Axis](./skill-design/axis.md)
